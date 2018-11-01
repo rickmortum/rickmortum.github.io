@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(Roboto-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(Roboto-Medium.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(Roboto-Bold.woff2) format('woff2');
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #F0F0F0 !important; 
+}
+
+
+
+#MOVE {
+    display: inline-block;
+    position:relative;
+    -webkit-animation: backandforth 3.5s ease-in-out 0s;
+    -webkit-animation-iteration-count:infinite;
+    animation: backandforth 3.s ease-in-out 0s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes backandforth {0%{left:15%;} 50%{left:85%;} 100%{left:15%;}}
+
+@-webkit-keyframes backandforth {0%{left:15%;} 50%{left:85%;} 100%{left:15%;}}
+
+  /*30x60px  4.076086957x14.5631086%*/
+.bottom {
+  position:absolute;
+  cursor: pointer;
+  //height: 26px; 
+  //width: 52px;
+  height:42px;
+  width:85px;
+  background: #86186F;
+  display: inline-block;
+  //margin: 0 1em 1em 0;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  //left:43%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  box-shadow: 0px 3px 0px #D3D3D3;
+  //margin-bottom: 100px;
+}
+.vcenter {
+    line-height: 50px;
+}
+
+
+#TIME{
+    font-size: 22.5pt;
+    font-weight: 400;
+    padding-top:24.5%;
+    font-family: 'Roboto', sans-serif;
+    line-height:125%;
+    color:white;
+    text-shadow: -2.6px 0 2px black, 0 2.6px 2px black, 2.6px 0 2px black, 0 -2.6px 2px black;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#colors{
+    position: absolute;
+    //background: linear-gradient(to right,  #6634B0 0%,#6634B0 33.33%,#D28037 33.33%,#D28037 66.66%,#403EF3 66.66%,#403EF3 100%);
+    height:100px;
+    width:90%;
+    left: 5%;
+    top:90px;
+    //border-bottom:solid #D3D3D3;
+    -webkit-animation: opa 1.5s linear 0s;
+    -webkit-animation-iteration-count:infinite;
+    animation: opa 1.5s linear 0s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes opa {0%{opacity:1;} 50%{opacity:0.6;} 100%{opacity:1;}}
+
+@-webkit-keyframes opa {0%{opacity:1;} 50%{opacity:0.6;} 100%{opacity:1;}}
+
+#wrapper{
+    width:100%;
+    position: absolute;
+    top:66px;
+    pointer-events: none;
+    white-space: nowrap;
+}
+#top{
+    height:100%;
+    font-size:20;
+    color:white;
+    line-height:465%;
+    padding-right: 30px;
+    text-shadow: 0px 0px;
+
+}
+
+#bigwrapper{
+    background-color: #FFFFFF;
+    height:140px;
+    box-shadow: 1px 3px 0px #D3D3D3;
+}
+
+.container-fluid{
+  padding:3.5%;
+  margin-left:0;
+  margin-right: 0;
+  margin:0;
+  font-weight:500;
+
+}
+
+.colorr{
+  
+  height: 100%;
+  cursor: pointer;
+  opacity:0;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+/* The Modal (background) */
+.col-pck{
+  height:100px;
+  border-color:white;
+  border-width:3px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+
+
+.acti {
+
+    filter: brightness(60%);
+    border-color: black;
+}
+
+ 
+
+
+
+.modal{
+  position:absolute;
+  overflow:auto;
+}
+
+.modal-transparent {
+  background: transparent;
+  //background-color:rgba(255, 255, 255, 0.5);
+}
+.modal-transparent .modal-content {
+  background: transparent;
+  background-color:rgba(255, 255, 255, 0.4);
+}
+.modal-backdrop.modal-backdrop-transparent {
+  background: #ffffff;
+}
+.modal-backdrop.modal-backdrop-transparent.in {
+  opacity: .9;
+  filter: alpha(opacity=40);
+}

@@ -1,0 +1,362 @@
+<!--<html lang="en" manifest="cache.appcache">-->
+
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="xTicket">
+    <!--<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+
+    <!--<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">-->
+
+    <!--<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">-->
+    <title>xTicket</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="apple-touch-icon" href="gfx/ico.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquerymobile.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    <!-- Custom CSS -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+<div id="header" style="height:75px;width:100%;background-color:#9B1D81">
+    <div id="back" style="float:left">
+        <img style="position:relative;width:30px;padding-top:95%;left:25%" src="gfx/back.png">
+    </div>
+    <div class="text-center" style="font-style:bold;font-weight:500" id="top" >One Way</div>
+</div>
+<!--<a style='display:block;width:100%'>-->
+<div id="bigwrapper">
+<div id="colors" class="container btn nopadding">
+  <div id='left' class="col-xs-4 colorr nopadding" data-toggle="modal" data-target="#myModal" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;background-color:#6634B0"></div>
+  <div id='middle' class="col-xs-4 colorr nopadding" data-toggle="modal" data-target="#myModal"  style="background-color:#D28037"></div>
+  <div id='right' class="col-xs-4 colorr nopadding" data-toggle="modal" data-target="#myModal"  style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;background-color:#403EF3"></div>
+</div>
+
+<div id="wrapper">
+  <span id="MOVE"><p class="text-center" id="TIME"></p></span>
+</div>
+
+
+<p class="text-center" style="font-size:9pt; position:relative; top:85%"><strong>Tap to reveal barcode</strong></p>
+</div>
+<!--</a>-->
+
+<div id="down-btn" class="bottom"><img class="img-responsive" src="gfx/down.png" width = 20% style="position:relative;left:50%;top:15px;transform: translate(-50%, 0%);"></div>
+
+
+
+<div class="container-fluid text-center" style="line-height:5px;padding-top:50px">
+    <div class="row">
+        <div id="activated" class="col-xs-12 text-center" style="padding-bottom:15px;">
+            <div id="active" class="btn" style="font-style:bold;font-weight:500;font-size:13pt;width:100%;height:40px;background-color:#ED203D;color:white;line-height:25px;box-shadow: 0px 3px 0px #CD3335;text-shadow: 0px 0px"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id = "ticket_type" class="col-xs-12 text-center">
+            <div class="btn" style="font-style:bold;font-weight:500;font-size:13pt;width:100%;height:40px;background-color:#FFFFFF;color:black;line-height:25px;box-shadow: 0px 3px 0px #D3D3D3;text-shadow: 0px 0px">One Way</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div id="zone" class="btn" style="width:100%;background-color:#FFFFFF;color:black;line-height:25px;box-shadow: 0px 3px 0px #D3D3D3;">
+                <img style="pointer-events: none;" id="zoneimg" width=100% src="gfx/1_v2.png">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <div class="btn" style="width:100%;height:68px;background-color:#FFFFFF;color:black;line-height:25px;box-shadow: 0px 3px 0px #D3D3D3;">
+                <div id="actions" class=" btn" style="font-size:1.3em; font-style:bold;font-weight:500;position:relative;left:-2.25%;top:4.5%;color:white;width:48%;height:50px;background-color:#9B1D81;line-height:32px;text-shadow: 0px 0px;box-shadow: 0px 3px 0px #5F2A5E;">Actions</div>
+             
+                <div id="refresh" class="btn" style="font-size:1.3em; font-style:bold;font-weight:500;position:relative;right:-2.25%;top:4.5%;color:white;width:48%;height:50px;background-color:#9B1D81;line-height:32px;text-shadow: 0px 0px;box-shadow: 0px 3px 0px #5F2A5E;">Ticket Info</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+
+
+<!--<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content container">
+    <div class="row">
+      <div class="col-xs-4 l-col col-pck" style="background-color:red"></div>
+      <div class="col-xs-4 m-col col-pck" style="background-color:red"></div>
+      <div class="col-xs-4 r-col col-pck" style="background-color:red"></div>
+    </div>
+  </div>
+</div>-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+     <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 <h4 class="modal-title">COLORS</h4>
+            </div>      <!-- /modal-header -->
+            <div class="modal-body">
+              <div class="modal-colors container-fluid">
+                <div class="row">
+                  <div class="col-xs-4 l-col col-pck" style="background-color:#FF3F40;max-height:50px"></div>
+                  <div class="col-xs-4 m-col col-pck" style="background-color:#FF3F40;max-height:50px"></div>
+                  <div class="col-xs-4 r-col col-pck" style="background-color:#FF3F40;max-height:50px"></div>
+                </div>
+              </div>
+            </div>    <!-- /modal-body -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>      <!-- /modal-footer -->
+        </div>
+    </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+  <!-- jQuery 
+  <script src="css/jquery.min.js"></script>-->
+
+  <!-- Bootstrap Core JavaScript -->
+  
+
+
+<!--
+<script
+        src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0="
+        crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+-->
+<script src="js/jquery2.min.js"></script>
+<script src="js/jquerymobile.min.js"></script>
+<script src="css/bootstrap.min.js"></script>
+
+  <script>
+// var closem = function (e, $target, data) {
+ //  $('#myModal').modal('hide');
+//};
+
+  //$('body').bind('touchy-pinch',closem);
+  $('body').on("swiperight",function(){
+    $("#myModal").modal('hide');
+    //alert('this');
+  });
+
+  </script>
+
+
+<script>
+  $("p").on("swipe",function(){
+    $(this).hide();
+  });                       
+</script>
+
+<!--format time for scrolling letters-->
+<script src="js/settime.js"></script>
+
+<!--cookies!-->
+<script src="js/cookies.js"></script>
+
+
+
+
+<!--format color selection-->
+  <script src="js/colors.js"></script>
+
+
+
+
+
+<!--buttons!-->
+  <script>
+  var zonetic=0;
+  var zonesrcs=['1A.png','1.png','1_v2.png','4.png','8.png'];
+  $('#zone').click(function(){
+    $('#zoneimg').prop('src','gfx/'+zonesrcs[zonetic]);
+    setCookie('zoneimg',$('#zoneimg').prop('src'),1);
+    zonetic++;
+    if(zonetic>zonesrcs.length-1){zonetic=0};
+  }
+    )
+
+  //refresh page buttom-
+
+  $('#refresh').click(function() {
+      window.location.reload();
+  });
+  
+  //set activated time button
+
+  $('#active').click(function() {
+    var st = prompt("Ticket activated at ", "");
+    if (st != null) {
+      $('#active').html("Ticket activated at "+st);
+      setCookie('active',st,1);
+      }
+  })
+
+  //clear cookies button
+
+  $('#down-btn').click(function(){
+    clearCook();
+  });
+  </script>
+
+
+<script>
+/*setTimeout(function(){
+  $('#activated').hide()
+  $('#ticket_type').css('padding-top','0')
+}, 300000);*/
+
+
+star= new Date(getCookie('init'))
+
+setInterval(function() {
+  var datetimeNow = new Date();
+  diff = datetimeNow - star
+  if (diff/1000>300){
+    $('#activated').hide()
+  }
+}, 1000);
+</script>
+
+
+
+
+<script>
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--change security color on click
+<script>
+var coltic=0
+
+var colsrcs=[
+  '#6634B0',
+  '#D28037',
+  '#403EF3',
+  '#93F070',
+  '#9E9E94',
+  '#9C74F6',
+  '#927F5D',
+  '#A59A90',
+  '#7FEA90',
+  '#8E48C5',
+  '#DECB81',
+  '#8B4893',
+  '#904DC6',
+  '#DECB81',
+  '#DF6C4E',
+  '#63BF49',
+  '#B482B3',
+  '#FFBD38',
+  ];
+
+$('.colorr').click(function(){
+  var id = $(this).attr('id');
+  var newcolor = colsrcs[coltic];
+  $(this).css('background-color',newcolor);
+  setCookie(id,newcolor,1);
+  coltic++;
+  if(coltic>colsrcs.length-1){coltic=0};
+}
+  )
+</script>-->
+
+
+
+
+
+
+
+
+
+<!--
+<script>
+var coltic=0
+
+var colsrcs=[
+  'linear-gradient(to right,  #6634B0 0%,#6634B0 33.33%,#D28037 33.33%,#D28037 66.66%,#403EF3 66.66%,#403EF3 100%)',
+  'linear-gradient(to right,  #93F070 0%,#93F070 33.33%,#9E9E94 33.33%,#9E9E94 66.66%,#9C74F6 66.66%,#9C74F6 100%)',
+  'linear-gradient(to right,  #927F5D 0%,#927F5D 33.33%,#A59A90 33.33%,#A59A90 66.66%,#7FEA90 66.66%,#7FEA90 100%)',
+  'linear-gradient(to right,  #8E48C5 0%,#8E48C5 33.33%,#D2F354 33.33%,#D2F354 66.66%,#8B4893 66.66%,#8B4893 100%)',
+  'linear-gradient(to right,  #904DC6 0%,#904DC6 33.33%,#DECB81 33.33%,#DECB81 66.66%,#DF6C4E 66.66%,#DF6C4E 100%)',
+  'linear-gradient(to right,  #63BF49 0%,#63BF49 33.33%,#B482B3 33.33%,#B482B3 66.66%,#FFBD38 66.66%,#FFBD38 100%)',
+  ]
+
+$('#bigwrapper').click(function(){
+  $('#colors').css('background',colsrcs[coltic]);
+  coltic++;
+  if(coltic>colsrcs.length-1){coltic=0};
+}
+  )
+</script>
+-->
+
+`
+
+</body>
+</html>
