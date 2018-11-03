@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# v3.8
+index.html
+gfx/1A.png
+gfx/1.png
+gfx/1_v2.png
+gfx/back.png
+gfx/down.png
+gfx/startup.png
+gfx/ico.png
+
+
+js/settime.js
+js/colors.js
+js/cookies.js
+
+css/roboto.woff
+css/jquery.min.js
+js/jquery2.min.js
+js/jquerymobile.min.js
+css/jquerymobile.min.css
+css/bootstrap.min.css
+css/bootstrap.min.js
+css/index.css
+
+#https://code.jquery.com/jquery-2.1.0.min.js
+#http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js
+
+
+#https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
+#https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+#https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
