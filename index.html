@@ -43,7 +43,7 @@
         <div style= "text-align: center;background-color:#9B1D81; margin:0px;border-top-left-radius: 8px;border-top-right-radius: 8px;height:40px"> 
             <p style = "line-height: 40px; font-weight: bold;color:white">ONE WAY</p>
         </div>
-        <img src="gfx/QRs/QR1.PNG" style="padding:30px;width:60%;margin-left:auto;margin-right:auto;display:block"> 
+        <img id="QRC" src="gfx/QRs/QR1.PNG" style="padding:30px;width:60%;margin-left:auto;margin-right:auto;display:block"> 
         <div id="colorwrapper">
                 <div id="colors" class="container nopadding">
                     <div id='left' class="col-xs-4 colorr nopadding" data-toggle="modal" data-target="#myModal" style="border-top-left-radius: 8px;background-color:#6634B0"></div>
@@ -169,6 +169,29 @@
     clearCook();
   });
   </script>
+
+
+
+
+<script>
+var qr = 2;
+var path="";
+// Will execute myCallback every 0.5 seconds 
+
+
+function myCallback() {
+  path="gfx/QRs/"+"QR"+qr+".PNG";
+  $('#QRC').prop('src',path);
+  qr++;
+  if (qr>7){qr=1};
+ // Your code here
+}
+
+window.setInterval(myCallback, 2000);
+
+</script>
+
+
 
 
 <script>
