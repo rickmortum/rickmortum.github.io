@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v3.9
+# v4
 index.html
 gfx/1A.png
 gfx/1.png
@@ -8,7 +8,15 @@ gfx/back.png
 gfx/down.png
 gfx/startup.png
 gfx/ico.png
-
+gfx/4_v2.png
+gfx/bottom.PNG
+gfx/QRs/QG1.PNG
+gfx/QRs/QG2.PNG
+gfx/QRs/QG3.PNG
+gfx/QRs/QG4.PNG
+gfx/QRs/QG5.PNG
+gfx/QRs/QG6.PNG
+gfx/QRs/QG7.PNG
 
 js/settime.js
 js/colors.js
