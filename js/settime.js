@@ -4,9 +4,9 @@ function formatAMPM(date) {
   var secs = date.getSeconds();
   var day= date.getDate();
   var mon = date.getMonth()+1;
-  var yr = date.getYear()
+  var yr = date.getFullYear()
   var MS_PER_MINUTE = 60000;
-  yr=yr-100
+  //yr=yr-100
   var ampm = hours >= 12 ? 'PM' : 'AM';
 
   var start = new Date(date);

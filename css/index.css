@@ -27,14 +27,14 @@ body{
 #MOVE {
     display: inline-block;
     position:relative;
-    -webkit-animation: backandforth 3.5s ease-in-out 0s;
+    -webkit-animation: backandforth 4.5s ease-in-out 0s;
     -webkit-animation-iteration-count:infinite;
     animation: backandforth 3.s ease-in-out 0s;
     animation-iteration-count:infinite;
 }
-@keyframes backandforth {0%{left:3%;} 50%{left:62%;} 100%{left:3%;}}
+@keyframes backandforth {0%{left:3%;} 50%{left:53%;} 100%{left:3%;}}
 
-@-webkit-keyframes backandforth {0%{left:3%;} 50%{left:62%;} 100%{left:3%;}}
+@-webkit-keyframes backandforth {0%{left:3%;} 50%{left:53%;} 100%{left:3%;}}
 
   /*30x60px  4.076086957x14.5631086%*/
 .bottom {
@@ -62,7 +62,7 @@ body{
 
 #TIME{
     font-size: 15.5pt;
-    font-weight: 300;
+    font-weight: 700;
     //padding-top:24.5%;
     font-family: 'Roboto', sans-serif;
     line-height:100%;
