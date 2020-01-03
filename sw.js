@@ -1,4 +1,4 @@
-//v3.56 update 6
+//v3.56 update 7
 //bytefigg
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
