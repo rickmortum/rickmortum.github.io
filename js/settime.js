@@ -23,7 +23,7 @@ function formatAMPM(date) {
   secs = secs < 10 ? '0'+secs : secs;
   day = day < 10 ? '0'+day : day;
   mon = mon < 10 ? '0'+mon : mon;
-  var strTime = hours + ':' + minutes + ':' +  secs + ' ' + ampm + '<br>' + mon + '/' + day + '/' +yr;
+  var strTime = hours + ':' + minutes + ':' +  secs + ' ' + ampm + " "+ mon + '/' + day + '/' +yr;
   var startt = shours + ':' + smin + ' ' + ampm ;
   return [strTime,startt];
 }

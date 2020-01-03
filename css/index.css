@@ -19,7 +19,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background: #F0F0F0 !important; 
+    background: #F7F7F7 !important; 
 }
 
 
@@ -32,10 +32,9 @@ body{
     animation: backandforth 3.s ease-in-out 0s;
     animation-iteration-count:infinite;
 }
+@keyframes backandforth {0%{left:3%;} 50%{left:62%;} 100%{left:3%;}}
 
-@keyframes backandforth {0%{left:15%;} 50%{left:85%;} 100%{left:15%;}}
-
-@-webkit-keyframes backandforth {0%{left:15%;} 50%{left:85%;} 100%{left:15%;}}
+@-webkit-keyframes backandforth {0%{left:3%;} 50%{left:62%;} 100%{left:3%;}}
 
   /*30x60px  4.076086957x14.5631086%*/
 .bottom {
@@ -62,24 +61,32 @@ body{
 
 
 #TIME{
-    font-size: 22.5pt;
-    font-weight: 400;
-    padding-top:24.5%;
+    font-size: 15.5pt;
+    font-weight: 300;
+    //padding-top:24.5%;
     font-family: 'Roboto', sans-serif;
-    line-height:125%;
+    line-height:100%;
     color:white;
-    text-shadow: -2.6px 0 2px black, 0 2.6px 2px black, 2.6px 0 2px black, 0 -2.6px 2px black;
+    text-shadow: -1px 0 2px #262626, 0 1px 2px #262626, 1px 0 2px #262626, 0 -1px 2px #262626;
     opacity: 0;
     pointer-events: none;
 }
+#colorwrapper{
+  height:50px;
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 #colors{
-    position: absolute;
+    //position: absolute;
     //background: linear-gradient(to right,  #6634B0 0%,#6634B0 33.33%,#D28037 33.33%,#D28037 66.66%,#403EF3 66.66%,#403EF3 100%);
-    height:100px;
-    width:90%;
-    left: 5%;
-    top:90px;
+    //height:40px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    //left: 5%;
+    //top:90px;
     //border-bottom:solid #D3D3D3;
     -webkit-animation: opa 1.5s linear 0s;
     -webkit-animation-iteration-count:infinite;
@@ -93,8 +100,8 @@ body{
 
 #wrapper{
     width:100%;
-    position: absolute;
-    top:66px;
+    position: absolute ;
+    top:346px;
     pointer-events: none;
     white-space: nowrap;
 }
@@ -110,8 +117,13 @@ body{
 
 #bigwrapper{
     background-color: #FFFFFF;
-    height:140px;
-    box-shadow: 1px 3px 0px #D3D3D3;
+    height:83vh;
+    box-shadow: 3px 3px 3px #D3D3D3;
+    //padding: 10px;
+    width: 93%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 8px;
 }
 
 .container-fluid{

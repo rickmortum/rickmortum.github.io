@@ -67,12 +67,12 @@ function getCookie(cname) {
 
 $(document).ready(function(){
   if(getCookie('active')!=""){
-    $('#active').html("Ticket activated at "+getCookie('active'));
+    $('#active').html("ACTIVATED  "+getCookie('active'));
   } else {
         star= new Date()
         setCookie('init',star,1);
         st=formatAMPM(star)[1]
-        $("#active").html("Ticket activated at " + st);
+        $("#active").html("ACTIVATED " + st);
         setCookie('active',st,1);
   }
 
