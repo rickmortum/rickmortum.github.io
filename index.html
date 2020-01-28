@@ -55,8 +55,8 @@
                     <span id="MOVE"><p class="text-center" id="TIME"></p></span>
                 </div>
                 </div>
-                <div style="background-color: #EFE1F4">
-                    <img src ="gfx/4_v2.png" style="width:100%;margin-left:auto;margin-right:auto;display:block">
+                <div id="zone" style="background-color: #EFE1F4">
+                    <img id="zoneimg" src ="gfx/4.png" style="width:100%;margin-left:auto;margin-right:auto;display:block">
                 </div>
                 
                 <div style = "border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;text-align: center;background-color:#9B1D81;">
@@ -138,7 +138,7 @@
 <!--buttons!-->
   <script>
   var zonetic=0;
-  var zonesrcs=['1A.png','1.png','1_v2.png','4.png','8.png'];
+  var zonesrcs=['1.png','4.png'];
   $('#zone').click(function(){
     $('#zoneimg').prop('src','gfx/'+zonesrcs[zonetic]);
     setCookie('zoneimg',$('#zoneimg').prop('src'),1);

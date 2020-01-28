@@ -1,12 +1,10 @@
-//v3.56 update 8
+//v3.56 update 10
 //bytefigg
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
 '/sw.js',
 '/index.html',
-'/gfx/1A.png',
 '/gfx/1.png',
-'/gfx/1_v2.png',
 '/gfx/4.png',
 '/gfx/8.png',
 '/gfx/back.png',
